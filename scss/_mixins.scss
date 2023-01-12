@@ -1,0 +1,35 @@
+@mixin responsiveTo($_size) {
+	@media (min-width: $_size) {
+		@content;
+	}
+}
+@mixin alignTitle($_fntSize) {
+	font-size: $_fntSize;
+	text-align: center;
+	font-weight: bold;
+	position: relative;
+	text-transform: uppercase;
+}
+@mixin afterTitle($_fntSize) {
+	display: block;
+	position: absolute;
+	top: $_fntSize + 1.4rem;
+	left: 50%;
+	transform: translateX(-50%);
+	width: 6.6rem;
+	background-color: $afterTitle;
+}
+@mixin postTitle($_fntSize, $_color) {
+	font-size: $_fntSize;
+	color: $_color;
+	text-transform: uppercase;
+}
+%flexContainer {
+	display: flex;
+	justify-content: space-between;
+}
+%wrapper {
+	width: 100%;
+	max-width: 1200px;
+	margin: 0 auto;
+}

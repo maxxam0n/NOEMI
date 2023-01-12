@@ -26,13 +26,6 @@ dl,
 dd {
   margin: 0;
 }
-/* Выставляем основные настройки по-умолчанию для body */
-body {
-	min-height: 100vh;
-	scroll-behavior: smooth;
-	text-rendering: optimizeSpeed;
-	line-height: 1.5;
-}
 /* Удаляем стандартную стилизацию для всех ul и il, у которых есть атрибут class*/
 ul[class],
 ol[class] {
@@ -46,10 +39,6 @@ a:not([class]) {
 img {
 	max-width: 100%;
 	display: block;
-}
-/* Указываем понятную периодичность в потоке данных у article*/
-article > * + * {
-	margin-top: 1em;
 }
 /* Наследуем шрифты для инпутов и кнопок */
 input,
@@ -66,4 +55,29 @@ select {
     transition-duration: 0.01ms !important;
     scroll-behavior: auto !important;
   }
+}
+// Корневой размер шрифта текста
+html {
+	font-size: 10px;
+}
+// Подключаем шрифты
+@font-face {
+	font-family: "OpenSans";
+	src: url(../fonts/OpenSans-Bold.ttf) format("truetype"), url(../fonts/OpenSans-Bold.woff) format("woff"), url(../fonts/OpenSans-Bold.woff2) format("woff2");
+	font-weight: bold;
+	font-style: normal;
+}
+@font-face {
+	font-family: "OpenSans";
+	src: url(../fonts/OpenSans-Regular.ttf) format("truetype"), url(../fonts/OpenSans-Regular.woff) format("woff"), url(../fonts/OpenSans-Regular.woff2) format("woff2");
+	font-weight: normal;
+	font-style: normal;
+}
+/* Выставляем основные настройки по-умолчанию для body */
+body {
+	min-height: 100vh;
+	scroll-behavior: smooth;
+	text-rendering: optimizeSpeed;
+	line-height: 1.5;
+	font-family: OpenSans, Arial, Helvetica, sans-serif;
 }
